@@ -1,0 +1,34 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  font-size: 12px;
+}
+.primary-bg {
+  background-color: #4b677e !important;
+}
+.font-8 {
+  font-size: 8px !important;
+}
+.font-10 {
+  font-size: 10px !important;
+}
+.font-12 {
+  font-size: 12px !important;
+}
+.font-16 {
+  font-size: 16px !important;
+}
+.cut-text {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 75px;
+  height: 1.2em;
+  white-space: nowrap;
+}
+.nav-item {
+  cursor: pointer !important;
+}
+.dot{
+    display: block;
+    width: 10px;
+    height: 10px;
+}

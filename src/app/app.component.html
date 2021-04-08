@@ -1,0 +1,268 @@
+<div class="container-fluid primary-bg">
+  <div class="row">
+    <div class="col-md-6 col-12">
+      <div class="m-2">
+        <img src="assets/invoice.png" class="img-fluid" alt="...">
+      </div>
+    </div>
+    <div class="col-md-6 col-12 bg-white">
+      <div class="row p-2 mt-3">
+        <div class="col-4 my-auto">
+          <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill font-10">
+            <span class="text-primary"><i class="fa fa-envelope"></i></span> DIRECT
+          </button>
+        </div>
+        <div class="col-8">
+          <div class="d-flex float-end">
+            <div class="dropdown">
+              <button class="btn btn-sm btn-outline-secondary dropdown-toggle font-12" type="button"
+                id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                More
+              </button>
+              <ul class="dropdown-menu font-12" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#">Export</a></li>
+                <li><a class="dropdown-item" href="#">Mark as exported</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Setup Vendor</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
+                    Flag Invoice <span class="fa fa-flag"></span>
+                  </a></li>
+                <li><a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
+                    Archive Invoice <span class="fa fa-archive"></span>
+                  </a></li>
+                <li><a class="dropdown-item d-flex align-items-center justify-content-between text-danger" href="#">
+                    Delete Invoice <span class="fa fa-trash"></span>
+                  </a></li>
+              </ul>
+            </div>
+            <button class="btn btn-sm btn-primary font-12 ms-2">Approve</button>
+          </div>
+        </div>
+      </div>
+      <div class="row p-2 mt-3">
+        <div class="col-12">
+          <div>
+            <span *ngIf="!isCollapse" class="text-muted d-block font-8">VENDOR</span>
+            <strong class="fs-5">Zylkar Corporation</strong>
+            <button class="btn btn-outline-secondary rounded-circle ms-2" type="button" (click)="collapseChange()">
+              <span class="fa" [ngClass]="isCollapse ? 'fa-angle-down' : 'fa-angle-up'"></span>
+            </button>
+            <span *ngIf="!isCollapse" class="text-success d-block font-10">
+              <span class="fa fa-check-circle"></span> This vendor is mapped
+            </span>
+            <table *ngIf="isCollapse" class="table table-hover mt-2">
+              <tbody class="font-10 fw-bold">
+                <tr>
+                  <td class="align-middle">
+                    <span>00121</span>
+                  </td>
+                  <td class="align-middle">
+                    <span>April 8, 2015</span>
+                  </td>
+                  <td class="align-middle">
+                    <span>Alistair Burke Shop</span>
+                  </td>
+                  <td class="cut-text align-middle">
+                    <span class="text-muted">Lorem lpsum Lorem lpsumLorem lpsum Lorem lpsum</span>
+                  </td>
+                  <td class="align-middle">
+                    <span class="font-8 text-muted">Total</span>
+                  </td>
+                  <td class="align-middle">
+                    <span class="fw-bold font-16">$1326.23</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <table *ngIf="!isCollapse" class="table table-hover ">
+              <tbody class="font-10 fw-bold text-uppercase">
+                <tr>
+                  <td class="align-middle">
+                    <div class="d-flex flex-column">
+                      <span class="font-8 text-muted">Invoice No.</span>
+                      <span>00121</span>
+                    </div>
+                  </td>
+                  <td class="align-middle">
+                    <div class="d-flex flex-column">
+                      <span class="font-8 text-muted">Invoice Type</span>
+                      <span>Receipt</span>
+                    </div>
+                  </td>
+                  <td class="align-middle">
+                    <div class="d-flex flex-column">
+                      <span class="font-8 text-muted">Restaurant</span>
+                      <span>Alistair Burke Shop</span>
+                    </div>
+                  </td>
+                  <td class="align-middle">
+                    <div class="d-flex flex-column">
+                      <span class="font-8 text-muted">Subtotal</span>
+                      <span class="font-8 text-muted">tax</span>
+                    </div>
+                  </td>
+                  <td class="align-middle">
+                    <div class="d-flex flex-column">
+                      <span class="font-10 text-muted">$1300.00</span>
+                      <span class="font-10 text-muted">$26.23</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="align-middle">
+                    <div class="d-flex flex-column">
+                      <span class="font-8 text-muted">Posting Date</span>
+                      <span>April 8, 2015</span>
+                    </div>
+                  </td>
+                  <td class="align-middle">
+                    <div class="d-flex flex-column">
+                      <span class="font-8 text-muted">Invoice Date</span>
+                      <span>April 8, 2015</span>
+                    </div>
+                  </td>
+                  <td class="align-middle">
+                    <div class="d-flex flex-column">
+                      <span class="font-8 text-muted">Due Date</span>
+                      <span>May 8, 2015</span>
+                    </div>
+                  </td>
+                  <td class="align-middle">
+                    <div class="d-flex flex-column">
+                      <span class="font-8 text-muted text-uppercase">Total</span>
+                    </div>
+                  </td>
+                  <td class="align-middle">
+                    <div class="d-flex flex-column">
+                      <span class="fw-bold">$1326.23</span>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="row p-2 mt-3">
+        <div class="col">
+          <ul class="nav border-bottom">
+            <li class="nav-item" (click)="activeId='linkItems'">
+              <strong class="nav-link" [ngClass]="{'border-3 border-bottom border-primary': activeId=='linkItems'}">Link
+                Items</strong>
+            </li>
+            <li class="nav-item" (click)="activeId='history'">
+              <strong class="nav-link"
+                [ngClass]="{'border-3 border-bottom border-primary': activeId=='history'}">History</strong>
+            </li>
+          </ul>
+          <ng-container [ngSwitch]="activeId">
+            <ng-container *ngSwitchCase="'linkItems'">
+              <ng-container *ngTemplateOutlet="linkDataTemplate"></ng-container>
+            </ng-container>
+            <ng-container *ngSwitchCase="'history'">
+              <ng-container *ngTemplateOutlet="historyTemplate"></ng-container>
+            </ng-container>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #linkDataTemplate>
+    <div class="row mt-3">
+      <div class="col">
+        <table class="table table-hover ">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Quantity</th>
+              <th>Unit Price</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of itemList">
+              <td class="align-middle">
+                <div class="d-flex flex-column">
+                  <span>{{item.name}}</span>
+                  <span class="text-muted">{{item.subCategory}}</span>
+                </div>
+              </td>
+              <td class="align-middle">
+                {{item.quantity}}
+              </td>
+              <td class="align-middle">
+                $ {{item.unitPrice}} <span class="text-muted">Unit</span>
+              </td>
+              <td class="align-middle">
+                $ {{item.quantity * item.unitPrice}}
+              </td>
+            </tr>
+            <!-- <tr>
+              <td class="align-middle">
+                <div class="d-flex flex-column">
+                  <span class="font-8 text-muted">Posting Date</span>
+                  <span>April 8, 2015</span>
+                </div>
+              </td>
+              <td class="align-middle">
+                <div class="d-flex flex-column">
+                  <span class="font-8 text-muted">Invoice Date</span>
+                  <span>April 8, 2015</span>
+                </div>
+              </td>
+              <td class="align-middle">
+                <div class="d-flex flex-column">
+                  <span class="font-8 text-muted">Due Date</span>
+                  <span>May 8, 2015</span>
+                </div>
+              </td>
+              <td class="align-middle">
+                <div class="d-flex flex-column">
+                  <span class="font-8 text-muted text-uppercase">Total</span>
+                </div>
+              </td>
+              <td class="align-middle">
+                <div class="d-flex flex-column">
+                  <span class="fw-bold">$1326.23</span>
+                </div>
+              </td>
+            </tr> -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </ng-template>
+  <ng-template #historyTemplate>
+    <div class="row mt-3">
+      <h6>Recent Activity</h6>
+      <div class="col">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-4">
+                  <span class="d-block text-uppercase"><strong>Today</strong></span>
+                  <span class="text-muted d-block">9.25 AM</span>
+              </div>
+              <div class="col-8">
+                <div class="row">
+                  <div class="col-1 my-auto">
+                    <span class="dot bg-danger rounded-circle"></span>
+                  </div>
+                  <div class="col">
+                    <span class="d-block text-danger"><strong>Flagged by Jhon Doe</strong></span>
+                    <span class="text-muted d-block">Lorem lupsem dolor</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-template>
